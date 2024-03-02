@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Young+Serif&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    font-family:  "Poppins", "Inter", MTN Brighter Sans Extrabold, "Young Serif", times;
+    /* color: #fff; */
+   }
+   @font-face {
+    font-family: Dakota;
+    src: url("Dakota-Regular.ttf");
+   }
+   html{
+   scroll-behavior: smooth;
+   width: 100%;
+   height: 100%;
+   }
+   body{
+    background: #BED0F8;
+    width: 100%;
+   }
+   main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px 10px;
+    position: relative;
+   }
+  main .graphic_img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+  }
+  main .graphic_img.one {
+    top: 50px;
+    left: 50px;
+  }
+  main .graphic_img.two {
+    bottom: 50px;
+    left: 50px;
+  }
+  main .graphic_img.three {
+    top: 50px;
+    right: 50px;
+  }
+  main .graphic_img.four {
+    bottom: 50px;
+    right: 50px;
+  }
+   p,h1,span {
+    cursor: default;
+   }
+   .counter_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    max-width: 100%;
+    width: 700px;
+    background: #eee;
+    border-radius: 10px;
+    padding: 10px;
+    color: #000;
+    z-index: 500;
+   }
+   
+   .counter_container h1 {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    border-bottom: 3px solid #BED0F8;
+   }
+   .counter_container .parent{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+   }
+   .counter_container .parent .textarea_container{
+    height: auto;
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: -2px -2px 10px rgb(255,255,255,0.2),
+             5px 5px 5px rgb(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+   }
+   .counter_container .parent .textarea_container textarea{
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    background: transparent;
+    padding: 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: 550;
+    outline: none;
+    resize: none;
+    box-shadow:  inset -5px -5px 10px rgb(255, 255, 255, 0.2),
+                 inset 2px 2px 2px rgb(0, 0, 0, 0.2);
+   }
+   .counter_container .parent .word_count{
+    font-size: 23px;
+    font-weight: 700;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+   }
+  
+   .counter_container .parent .word_count .count{
+    color: #0c0c0c;
+    padding: 0 5px;
+    border-radius: 5px;
+    box-shadow: -10px -10px 10px rgb(255,255,255,0.2),
+    10px 10px 10px rgb(0, 0, 0, 0.1),
+    inset -5px -5px 5px rgb(255,255,255,0.2),
+    inset 3px 3px 5px rgb(0,0,0,0.15);
+    overflow: hidden;
+   }
+   .counter_container .parent .word_count .count span {
+    font-size: 30px;
+    transition: 0.5;
+    color: #000;
+    padding: 1px;
+   }
+   
+   .counter_container .parent .word_count img {
+    width: 330px;
+    height: 330px;
+    transition: 0.5s;
+    perspective: 500;
+   }
+   .counter_container .parent:hover img {
+   transform: scale(1.15);
+   }
+   .counter_container .btns{
+    width: 100%;
+    height: auto;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
+   }
+   .counter_container .btns button {
+    width: 150px;
+    height: 40px;
+    font-size: 19px;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    background: #BED0F8;
+    color: #000;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: bold;
+    /* padding: 5px 0; */
+    box-shadow: -5px -5px 5px rgb(255,255,255,0.5),
+    3px 3px 10px rgb(0, 0, 0, 0.5);
+   }
+   .counter_container button:hover {
+    transform: scale(0.95);
+    /* box-shadow: 0 0 
+    5px #000; */
+   }
+   @media screen and (min-width: 400px) and (max-width: 675px) {
+    .counter_container .parent .word_count img{
+        order: 1;
+    }
+   }
+   @media screen and (max-width: 400px) {
+    .counter_container .parent .word_count img{
+        width: 250px;
+        height: 250px;
+        order: 1;
+    }
+    .counter_container h1{
+        font-size: 2rem;
+    }
+    .counter_container  .btns button{
+        width: 140px;
+        font-size: 15.5px; 
+    }
+   }
+   @media screen and (max-width: 260px){
+    .counter_container .parent .word_count img{
+        width: 200px;
+        height: 200px;
+        order: 1;
+    }
+    .counter_container .parent .word_count .count {
+        font-size: 16px;
+    }
+    .counter_container .parent .word_count .count span {
+        font-size: 19px;
+    }
+    .counter_container  .btns button{
+        width: 130px;
+        font-size: 13px; 
+    }
+   }
